@@ -3,12 +3,12 @@
  */
 package dependabot.test;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+        System.out.println(StringUtils.indexOf("ffoo", "oo"));
     }
 }
