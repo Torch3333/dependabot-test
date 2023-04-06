@@ -24,6 +24,7 @@ dependencies {
     implementation 'com.google.guava:guava:30.1-jre'
 
     implementation 'com.scalar-labs:scalardb:3.6.0'
+    implementation 'org.apache.commons:commons-lang3:3.9'
 }
 
 application {
