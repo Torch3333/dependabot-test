@@ -19,9 +19,10 @@ jobs:
           java-version: 17
 
       - name: Generate and submit dependency graph
-        uses: gradle/actions/dependency-submission@v3
-        with:
-          # Exclude all dependencies that originate solely in the 'buildSrc' project
+        env:
           DEPENDENCY_GRAPH_EXCLUDE_PROJECTS: ':buildSrc'
           # Exclude dependencies that are only resolved in test classpaths
           DEPENDENCY_GRAPH_EXCLUDE_CONFIGURATIONS: '.*[Tt]est(Compile|Runtime)Classpath'
+        uses: gradle/actions/dependency-submission@v3
+        with:
+          # Exclude all dependencies that originate solely in the 'buildSrc' project
