@@ -1,6 +1,7 @@
 name: Dependency Submission
 
 on:
+  workflow-dispatch:
   push:
     branches: [ 'main' ]
 
@@ -20,7 +21,6 @@ jobs:
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@v3
         with:
-          build-root-directory: app
           # Exclude all dependencies that originate solely in the 'buildSrc' project
           DEPENDENCY_GRAPH_EXCLUDE_PROJECTS: ':buildSrc'
           # Exclude dependencies that are only resolved in test classpaths
