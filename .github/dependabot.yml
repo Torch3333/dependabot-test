@@ -14,6 +14,7 @@ updates:
         update-types: [ "version-update:semver-patch" ]
     groups:
       dependencies:
+        applies-to: version-updates
   # For GitHub Actions workflows, update all actions
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -23,3 +24,4 @@ updates:
       - "scalar-labs/scalardb"
     groups:
       github-actions:
+        applies-to: version-updates
