@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # For Gradle, update dependencies and plugins to the latest non-major version
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "scalar-labs/scalardb"
+    ignore:
+      - dependency-name: "*"
+        update-types: [ "version-update:semver-major" ]
+      - dependency-name: "software.amazon.awssdk:*"
+        update-types: [ "version-update:semver-patch" ]
+    groups:
+      dependencies
+  # For GitHub Actions workflows, update all actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "scalar-labs/scalardb"
+    groups:
+      github-actions
