@@ -13,7 +13,7 @@ updates:
       - dependency-name: "software.amazon.awssdk:*"
         update-types: [ "version-update:semver-patch" ]
     groups:
-      dependencies
+      dependencies:
   # For GitHub Actions workflows, update all actions
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -22,4 +22,4 @@ updates:
     reviewers:
       - "scalar-labs/scalardb"
     groups:
-      github-actions
+      github-actions:
