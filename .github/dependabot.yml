@@ -13,8 +13,15 @@ updates:
       - dependency-name: "software.amazon.awssdk:*"
         update-types: [ "version-update:semver-patch" ]
     groups:
-      dependencies:
+      production-dependencies:
+        dependency-type: "production"
+      angular:
         applies-to: version-updates
+        patterns:
+          - "@angular*"
+        update-types:
+          - "minor"
+          - "patch"
   # For GitHub Actions workflows, update all actions
   - package-ecosystem: "github-actions"
     directory: "/"
