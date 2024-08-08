@@ -1,0 +1,18 @@
+name: Auto-PR
+
+on:
+  pull_request:
+    branches:
+      - master
+      - "[0-9]+"
+      - "[0-9]+.[0-9]+"
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    uses: torch3333/scalardb/.github/workflows/auto-pr-reusable.yaml@master
+    secrets: inherit
+    with:
+      project_base_name: "Auto-pr test"
+      default_branch_name: "main"
