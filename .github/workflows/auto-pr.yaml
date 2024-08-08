@@ -12,9 +12,9 @@ env:
   VERSION: "auto-pr@v1"
 jobs:
   if_merged:
-    uses: torch3333/scalardb/.github/workflows/auto-pr-reusable.yaml@${{env.version}}
+    uses: torch3333/scalardb/.github/workflows/auto-pr-reusable.yaml@auto-pr@v1
     secrets: inherit
     with:
-      version: ${{ env.VERSION }}
+      version: auto-pr@v1
       project_base_name: "Auto-pr test"
 
