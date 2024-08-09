@@ -11,7 +11,7 @@ on:
 
 jobs:
   if_merged:
-    uses: torch3333/scalardb/actions/.github/workflows/auto-pr-reusable.yaml@master
+    uses: torch3333/scalardb/.github/workflows/auto-pr-reusable.yaml@master
     secrets: inherit
     with:
       project_base_name: "Auto-pr test"
