@@ -11,10 +11,8 @@ on:
 
 jobs:
   if_merged:
-    uses: scalar-labs/actions/.github/workflows/auto-pr-reusable.yaml@add-auto-pr
-#    secrets: inherit
-    secrets:
-      token: ${{ secrets.GH_PR_PAT }}
+    uses: torch3333/scalardb/actions/.github/workflows/auto-pr-reusable.yaml@add-auto-pr
+    secrets: inherit
     with:
       project_base_name: "Auto-pr test"
 
