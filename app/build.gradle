@@ -17,10 +17,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformats-text:2.14.3'
-    implementation 'org.apache.commons:commons-configuration2:2.0'
-    implementation 'com.scalar-labs:scalardb:3.11.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformats-text:2.18.0'
+    implementation 'org.apache.commons:commons-configuration2:2.11.0'
+    implementation 'com.scalar-labs:scalardb:3.13.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.1'
 }
 
 application {
