@@ -5,8 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    reviewers:
-      - "scalar-labs/scalardb"
     ignore:
       - dependency-name: "*"
         update-types: [ "version-update:semver-major" ]
