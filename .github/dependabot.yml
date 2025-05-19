@@ -21,8 +21,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    reviewers:
-      - "scalar-labs/scalardb"
     groups:
       github-actions:
         patterns:
