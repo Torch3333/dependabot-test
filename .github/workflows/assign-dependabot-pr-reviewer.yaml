@@ -7,6 +7,7 @@ on:
 jobs:
   assign-reviewer:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
 
     permissions:
       pull-requests: write
@@ -19,10 +20,10 @@ jobs:
           echo "Event Action: ${{ github.event.action }}"
           echo "PR Number: ${{ github.event.pull_request.number }}"
 
-      - name: Assign me as reviewer
-        if: github.actor == 'dependabot[bot]'
+      - name: Assign ScalarDB team as reviewers for Dependabot PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: gh pr edit $PR_NUMBER --add-reviewer @Torch3333
+          REPOSITORY: ${{ github.action_repository }}
+        run: gh pr edit $PR_NUMBER --add-reviewer Torch3333 --repo $REPOSITORY
 
