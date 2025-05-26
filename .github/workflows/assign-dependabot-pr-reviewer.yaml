@@ -21,7 +21,7 @@ jobs:
           echo "Actor: ${{ github.actor }}"
 
       - name: Assign me as reviewer
-        if: github.actor == 'dependabot[bot]' && github.event_action == 'ready_for_review'
+        if: github.event.pull_request.author == 'dependabot[bot]' && github.event_action == 'ready_for_review'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
