@@ -20,7 +20,7 @@ jobs:
           echo "PR Number: ${{ github.event.pull_request.number }}"
 
       - name: Assign me as reviewer
-        if: github.event.pull_request.author == 'dependabot[bot]'
+        if: github.actor == 'dependabot[bot]'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
