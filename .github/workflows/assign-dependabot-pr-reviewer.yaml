@@ -2,7 +2,7 @@ name: Assign reviewers to dependabot PRs
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, reopened]
 
 jobs:
   assign-reviewer:
@@ -24,6 +24,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-          REPOSITORY: ${{ github.action_repository }}
+          REPOSITORY: ${{ github.repository }}
         run: gh pr edit $PR_NUMBER --add-reviewer Torch3333 --repo $REPOSITORY
 
