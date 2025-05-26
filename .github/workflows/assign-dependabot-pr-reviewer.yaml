@@ -16,6 +16,7 @@ jobs:
         run: |
           echo "Actor: ${{ github.actor }}"
           echo "Event: ${{ github.event_name }}"
+          echo "Event Action: ${{ github.event.action }}"
           echo "PR Number: ${{ github.event.pull_request.number }}"
           echo "Actor: ${{ github.actor }}"
 
