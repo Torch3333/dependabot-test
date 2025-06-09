@@ -16,5 +16,5 @@ jobs:
           GH_TOKEN: ${{ secrets.READ_ORG_MEMBERS }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPOSITORY: ${{ github.repository }}
-        run: gh pr edit $PR_NUMBER --repo $REPOSITORY --add-reviewer scalar-labs/scalardb
+        run: gh pr edit $PR_NUMBER --repo $REPOSITORY --add-reviewer Torch-org/dev
 
