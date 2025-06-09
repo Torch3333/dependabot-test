@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Assign ScalarDB team as reviewers for Dependabot PRs
         env:
-#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPOSITORY: ${{ github.repository }}
         run: gh pr edit $PR_NUMBER --repo $REPOSITORY --add-reviewer scalar-labs/scalardb
